@@ -33,3 +33,11 @@ var num1 = 36.666
 var totalSqrt = sqrt(num1)
 
 print("totalSqrt = \(totalSqrt)")
+
+// Subtracts two floats being stored in as an integer. Rounding does not occur
+var sub1 = 100.5
+var sub2 = 10.5
+
+var totalSub = sub1 - sub2
+
+print("totalSub = \(totalSub)")
