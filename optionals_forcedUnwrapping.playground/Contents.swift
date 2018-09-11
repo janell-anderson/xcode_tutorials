@@ -34,3 +34,36 @@ else {
     print("someInt doesn't contain an integer value")
 }
 
+// OPTIONAL BINDING
+/*
+ It can be used with an if and while statements to deteremin
+ whether an optional has a value and, if so, extract the
+ value to a constant or variable.
+*/
+
+// optinal binding syntax to a constant
+
+let someOptional: String? = "hello world"
+if let constantName = someOptional {
+    print("constantName contains a value, here it is: \(constantName)")
+}
+
+// optinal binding syntax to a variable
+let someOpt : String? = "hello world"
+if var variableName = someOptional {
+    variableName += "!"                 // appends a "!" to the end of the String
+    print("variableName contains a value, here it is: \(variableName)")
+}
+
+// IMPLICIT UNWRAPPED OPTIONALS
+// Most instances in your code you know when an optional will always have a value. .
+// It can be useful to remove the need to check and unwrap an optional every time it needs to be accessed.
+// These kind of optionals are called implicit unwarped optionals.
+// The ! is not needed every time you use it; instead, you place an ! after the optional's type when you declare it.
+
+// Comparison of an optional string and an implicityly unwrapped optional string
+var optionalString: String? = "My optional string"
+var forcedUnWrappedString: String = optionalString!                 // requires an !
+
+var nextOptionalString: String! = "An implicitly unwrapped optional."
+var implicitUnwrappedString: String = nextOptionalString            // no ned for an !
