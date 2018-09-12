@@ -13,6 +13,7 @@ var continueGuessing = true
 var keepPlaying = true
 var input = ""
 var count: Int = 0
+var newGame: Int = 0
 
 while keepPlaying {
     randomNumber = Int(arc4random_uniform(101)) // get a random number between 0-100
@@ -56,9 +57,11 @@ input = input.replacingOccurrences(of: "\n", with: "", options: NSString.Compare
 
 if input == "N" || input == "n" {
     keepPlaying = false
-    print("You've guessed \(count) of times")
+    print("You've guessed \(count) of times before getting the right answer.")
+    print("You've played this game \(newGame) times")
     }
     continueGuessing = true
+    newGame = newGame + 1
 }
 
 /*
